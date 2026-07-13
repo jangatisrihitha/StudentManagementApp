@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
+
             DatabaseReference ref = FirebaseDatabase.getInstance(
                     "https://student-management-app-fd07a-default-rtdb.asia-southeast1.firebasedatabase.app/"
             ).getReference("Students");
