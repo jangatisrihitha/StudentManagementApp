@@ -31,6 +31,25 @@ public class MainActivity extends AppCompatActivity {
             String rollNo = etRollNo.getText().toString().trim();
             String department = etDepartment.getText().toString().trim();
             String phone = etPhone.getText().toString().trim();
+            if (name.isEmpty()) {
+                etName.setError("Enter Student Name");
+                return;
+            }
+
+            if (rollNo.isEmpty()) {
+                etRollNo.setError("Enter Roll Number");
+                return;
+            }
+
+            if (department.isEmpty()) {
+                etDepartment.setError("Enter Department");
+                return;
+            }
+
+            if (phone.isEmpty()) {
+                etPhone.setError("Enter Phone Number");
+                return;
+            }
 
             DatabaseReference ref = FirebaseDatabase.getInstance(
                     "https://student-management-app-fd07a-default-rtdb.asia-southeast1.firebasedatabase.app/"
